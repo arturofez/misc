@@ -53,3 +53,11 @@ killall Dock
 Para restaurar la configuración por defecto del Launchpad, borrar el archivo *db* y reiniciar el dock
 
 ---
+
+### Unir archivos con VLC
+Mediante línea de comandos, podemos unir archivos de vídeo con VLC sin transcodificarlos, siempre que tengan el mismo formato.
+~~~
+/Applications/VLC.app/Contents/MacOS/VLC file1.mp4 file2.mp4 file3.mp4 --sout "#gather:std{access=file,mux=ts,dst=all.ts}" --no-sout-all --sout-keep
+~~~
+
+---
