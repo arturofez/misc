@@ -56,7 +56,7 @@ Para restaurar la configuración por defecto del Launchpad, borrar el archivo *d
 
 ### Unir vídeos con FFmpeg
 Con FFmpeg podemos concatenar archivos de vídeo siempre que tengan el mismo formato y códec.
-Creamos un archivo "mylist.txt" que contenga una lista de los vídeos con el siguiente formato:
+Creamos un archivo `mylist.txt` que contenga una lista de los vídeos con el siguiente formato:
 ~~~
 file '/ruta-al-archivo/file1.mp4'
 file '/ruta-al-archivo/file2.mp4'
