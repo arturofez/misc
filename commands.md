@@ -54,10 +54,17 @@ Para restaurar la configuración por defecto del Launchpad, borrar el archivo *d
 
 ---
 
-### Unir archivos con VLC
-Mediante línea de comandos, podemos unir archivos de vídeo con VLC sin transcodificarlos, siempre que tengan el mismo formato.
+### Unir vídeos con FFmpeg
+Con FFmpeg podemos concatenar archivos de vídeo siempre que tengan el mismo formato y códec.
+Creamos un archivo "mylist.txt" que contenga una lista de los vídeos con el siguiente formato:
 ~~~
-/Applications/VLC.app/Contents/MacOS/VLC file1.mp4 file2.mp4 file3.mp4 --sout "#gather:std{access=file,mux=ts,dst=all.ts}" --no-sout-all --sout-keep
+file '/ruta-al-archivo/file1.mp4'
+file '/ruta-al-archivo/file2.mp4'
+file '/ruta-al-archivo/file3.mp4'
+~~~
+Y ejecutamos el comando:
+~~~
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ~~~
 
 ---
